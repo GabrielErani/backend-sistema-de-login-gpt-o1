@@ -6,7 +6,9 @@ const app = express();
 
 
 //middlewares
-app.use(cors());
+app.use(cors({
+    origin: 'https://sistema-de-login-o1.vercel.app',
+}));
 app.use(express.json());
 
 //rotas
