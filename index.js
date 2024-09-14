@@ -7,8 +7,8 @@ const app = express();
 
 //middlewares
 app.use(cors({
-    origin: 'https://sistema-de-login-o1.vercel.app',
-}));
+    origin: 'https://sistema-de-login-o1.vercel.app', // Permitir o domínio do Vercel
+  }));
 app.use(express.json());
 
 //rotas
