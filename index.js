@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const authMiddleware = require('./middleware/authMiddleware');
 
 const app = express();
 
@@ -10,6 +11,7 @@ app.use(cors({
     origin: 'https://sistema-de-login-o1.vercel.app', // Permitir o domínio do Vercel
   }));
 app.use(express.json());
+app.use(authMiddleware());
 
 //rotas
 const authRoutes = require('./routes/auth');
